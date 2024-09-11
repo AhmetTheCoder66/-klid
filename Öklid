@@ -1,0 +1,15 @@
+
+points=[(1,1),(4,5),(6,13),(8,25)]
+
+distances=[]
+
+def euclideanDistance(liste):
+    for i in range(len(liste)):
+        for p in range(i+1,len(liste)):
+            uzaklik=((liste[i][0] -  liste[p][0])**2  +  (liste[i][1] -  liste[p][1])**2)**0.5
+            distances.append(uzaklik)
+        
+
+euclideanDistance(points)
+print(distances)
+print(min(distances))
